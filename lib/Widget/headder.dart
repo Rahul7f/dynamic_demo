@@ -14,16 +14,21 @@ class HeaderWidget extends StatelessWidget {
         children: [
           Row(
             children: [
-              Column(
-                children: [
-                  Text(section?.properties?.headerTitle??""),
-                  const SizedBox(height: 10,),
-                  Text(section.properties?.headerSubtitle??""),
-                ],
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(section?.properties?.headerTitle??"",style:
+                    const TextStyle(fontSize: 20.0,fontWeight: FontWeight.bold),),
+                    const SizedBox(height: 10,),
+                    Text(section.properties?.headerSubtitle??"", style: const TextStyle(fontSize: 15.0,fontWeight: FontWeight.bold),),
+                  ],
+                ),
               ),
-              Spacer(),
+              const SizedBox(width: 10,),
               Container(height: 50,width: 50,decoration: BoxDecoration(
                 color: Colors.grey,
+                shape: BoxShape.circle,
                 image: DecorationImage(
                     image: NetworkImage(section.properties?.headerIconUrl??""
                     )
