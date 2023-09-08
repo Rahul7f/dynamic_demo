@@ -33,6 +33,11 @@ class _HomeScreenState extends State<HomeScreen> {
             FromWidget(fildsList: [data.sections![0].fields![0], data.sections![0].fields![1]]),
             GenderSelection(field: data.sections![0].fields![2]),
             ElevatedButton(onPressed: () {
+              if (formKey.currentState!.validate()) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Processing Data')),
+                );
+              }
 
             }, child: Text("Submit"))
           ]

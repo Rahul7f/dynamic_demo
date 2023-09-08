@@ -22,7 +22,7 @@ class FromWidget extends StatelessWidget {
                crossAxisAlignment: CrossAxisAlignment.start,
                children: [
                  Text("${e.name}"),
-                 SizedBox(height: 10,),
+                 const SizedBox(height: 10,),
                  TextFormField(
                     // The validator receives the text that the user has entered.
                     validator: (value) {

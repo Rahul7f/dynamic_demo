@@ -127,3 +127,6 @@ getUi(){
 }
 
 final formKey = GlobalKey<FormState>();
+
+String name = '';
+String dob = '';
