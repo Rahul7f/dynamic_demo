@@ -127,5 +127,3 @@ getUi(){
 }
 
 final formKey = GlobalKey<FormState>();
-
-enum BestTutorSite { javatpoint, w3schools, tutorialandexample }

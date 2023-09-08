@@ -26,15 +26,17 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-      body: Column(
-        children: [
-          HeaderWidget(section: data.sections![0]),
-          FromWidget(fildsList: [data.sections![0].fields![0], data.sections![0].fields![1]]),
-          GenderSelection(field: data.sections![0].fields![2]),
-          ElevatedButton(onPressed: () {
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            HeaderWidget(section: data.sections![0]),
+            FromWidget(fildsList: [data.sections![0].fields![0], data.sections![0].fields![1]]),
+            GenderSelection(field: data.sections![0].fields![2]),
+            ElevatedButton(onPressed: () {
 
-          }, child: Text("Submit"))
-        ]
+            }, child: Text("Submit"))
+          ]
+        ),
       ),
       ),
     );
